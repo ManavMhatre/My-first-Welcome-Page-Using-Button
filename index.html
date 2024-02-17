@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Second App By Me</title>
+    <style>
+        * {font-size: 40px;}
+        body {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Welcome App</h1>
+        <form onsubmit="show()">
+            <input type="submit" value="Click Me" style="background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 40px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 10px;">
+        </form>
+        <h2 id="id_msg"></h2>
+        <script>
+            function show() {
+                event.preventDefault();
+                let msg = document.getElementById("id_msg");
+                let d = new Date();
+                let hr = d.getHours();
+                if (hr < 12) msg.innerHTML = "Good Morning";
+                else if (hr < 16) msg.innerHTML = "Good Afternoon";
+                else msg.innerHTML = "Good Evening";
+            }
+        </script>
+    </center>
+</body>
+</html>
